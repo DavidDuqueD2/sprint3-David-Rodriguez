@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito, sans-serif;
+    /* font-size: 20px; */
+}
+
+:root {    
+    --white: #fdfbf8;
+    --yellow: #f9e290;
+    --pink: #fc9fa8;
+    --blue: #74dae8;
+    --purple: #6c3c89;
+}
+
+.all {
+    background-color: var(--white);
+}
+
+.header {
+    background-color: var(--purple);    
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+    height: 12vh;
+}
+
+.logo img {    
+    height: 120px;
+    width: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    transition: all 0.2s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--blue);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    transition: all 0.2s ease;
+}
+
+
+.nav-links li:hover {
+    transform: scale(1.2);
+}
+
+
+.main-about {
+    
+    min-height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.titulosabout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--purple);
+    margin:20px;
+}
+
+.titulosabout h2 {
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+    
+.contentabout {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 200px;
+}
+
+.image-contentabout img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+  
+
+.text-contentabout {
+    font-size: 20px;
+    font-weight: 400;
+    height: 300px;
+    width: 300px;
+    color: black;
+    text-align:center;
+    line-height: 1.5;
+    margin-top: 30px;
+    padding-top: 60px;
+}
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: var(--purple);
+    color: var(--purple);
+    text-align: center;
+    padding: 5px;
+    height: 12vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.text-footer{
+    color: var(--white);    
+}
