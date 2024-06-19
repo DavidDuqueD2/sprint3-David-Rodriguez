@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnowyCream-Raffle</title>
+    <link rel="shortcut icon" href="../Img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/raffle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="all">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <img src="../Img/logo.png" alt="Logo de la marca">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="./aboutUs.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./information.html">Information</a></li>
+                    <li><a href="./benefitsTips.html">Benefits and Tips</a></li>
+                    <li><a href="./raffle.html">Raffle</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Main content with Form and Map -->
+        <main class="main-raffle">
+            <section class="titulosraffle">
+                <h1>RAFFLE</h1>
+                <h2>You can collaborate to hold an exhibition event and participate in a raffle to win an easel</h2>
+            </section>
+            <div class="form-maps">
+                <section class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.88263477717!2d-118.74137101554471!3d34.02003927061178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20%C3%81ngeles%2C%20California%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sco!4v1718729570199!5m2!1ses-419!2sco" class="map-embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+                <form action="../pages/show_data.html" method="get" class="form-raffle">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-video"></i>
+                        <label for="meet-zoom">Choose Meet or Zoom</label>
+                        <select id="meet-zoom" name="meet-zoom" required>
+                            <option value="meet">Meet</option>
+                            <option value="zoom">Zoom</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-credit-card"></i>
+                        <label for="metodo-pago">Payment Options:</label>
+                        <div class="radio-group">
+                            <label class="radio-label cash">
+                                <input type="radio" id="cash" name="metodo-pago" value="cash" required>
+                                Cash 
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" id="creditcard" name="metodo-pago" value="creditcard" required>
+                                CreditCard
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" id="debitcard" name="metodo-pago" value="debitcard" required>
+                                DebitCard
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-comment"></i>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <label for="acepto">
+                            <input type="checkbox" id="acepto" name="acepto" required>
+                            I accept terms and conditions...
+                        </label>
+
+                        <button type="submit" class="submit-btn">Send</button>
+                    </div>
+
+                    
+                </form>
+            </div>
+        </main>
+        <!-- Footer Section -->
+        <footer>
+            <p class="text-footer">
+                Created by: David Rodríguez
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
