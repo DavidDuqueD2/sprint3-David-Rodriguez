@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Nunito, sans-serif;
-    /* font-size: 20px; */
 }
 
 :root {    
@@ -18,23 +15,30 @@
     --purple: #6c3c89;
 }
 
+
+
 .all {
     background-color: var(--white);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .header {
-    background-color: var(--purple);    
+    background-color: var(--purple);
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 50px;
+    padding: 5px 5vw;
     height: 12vh;
 }
 
-.logo img {    
-    height: 120px;
-    width: auto;
+.logo img {
+    height: auto;
+    width: 10vw; 
+    max-width: 120px; /* Máximo ancho */
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -43,10 +47,15 @@
     transform: scale(1.1);
 }
 
+.navbar {
+    width: 100%;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -59,22 +68,15 @@
     color: var(--blue);
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--white);
-    transition: all 0.2s ease;
-}
-
-
 .nav-links li:hover {
     transform: scale(1.2);
 }
 
-
 .main {
-    
-    min-height: 86vh;
+    flex: 1;
 }
+
+
 
 .tituloscontact {
     display: flex;
@@ -82,81 +84,113 @@
     align-items: center;
     justify-content: center;
     color: var(--purple);
-    margin:20px;
+    margin: 1.25rem;
 }
 
 .tituloscontact h2 {
     color: var(--blue);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 300;
-    margin-top: 5px;
+    margin-top: 0.3rem;
 }
-    
 
 .contentcontact {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
-    gap: 50px;
-
+    padding: 10px;
+    margin-top: 3.125rem;
+    gap: 3.125rem;
 }
-
+    
 .contentcontact img {
-    height: 350px;
-    width: 700px;
+    height: auto;
+    width: 100%;
+    max-width: 43.75rem;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     cursor: pointer;
 }   
 
 .text-contentcontact {
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-weight: 400;
-    height: 200px;
-    width: 300px;
-    color:var(--purple);
-    text-align:center;
+    color: var(--purple);
+    text-align: center;
     line-height: 1.5;
-    margin-top: 20px;
+    margin-top: 1.25rem;
+    width: 80%;
+    max-width: 18.75rem;
 }
 
 .emailphone {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 250px;
+    gap: 50px;
     margin-bottom: 100px;
 }
 
 .email, .phone {
     color: grey;
-    font-size: 27px;
+    font-size: 1.6875rem;
     font-style: italic;
 }
 
-
-
-
-
-
-
-
-
 footer {
     background-color: var(--purple);
-    color: var(--purple);
     text-align: center;
-    padding: 5px;
+    padding: 1.25rem;
     height: 12vh;
-    
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin-top: auto; /* Esto asegura que el footer esté abajo */
 }
 
-.text-footer{
-    color: var(--white);    
+.text-footer {
+    color: var(--white);
+}
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 8rem;
+    }
+
+}
+
+@media (min-width: 767px) {
+    .header {
+        padding: 5px 5%;
+    }
+
+    .emailphone {
+        flex-direction: row;
+        gap: 250px;
+        margin-bottom: 6.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        padding: 1rem 10vw; /* Cambiado a 1rem 10vw */
+    }
+
+    .nav-links {
+        gap: 2rem; /* Añadido */
+    }
 }

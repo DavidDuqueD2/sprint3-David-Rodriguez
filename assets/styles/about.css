@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Nunito, sans-serif;
-    /* font-size: 20px; */
+    font-family: 'Nunito', sans-serif;
 }
 
 :root {    
@@ -18,23 +15,29 @@
     --purple: #6c3c89;
 }
 
+
+
 .all {
     background-color: var(--white);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
-    background-color: var(--purple);    
+    background-color: var(--purple);
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 50px;
+    padding: 5px 5vw;
     height: 12vh;
 }
 
-.logo img {    
-    height: 120px;
-    width: auto;
+.logo img {
+    height: auto;
+    width: 10vw; 
+    max-width: 120px; /* Máximo ancho */
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -43,10 +46,16 @@
     transform: scale(1.1);
 }
 
+.navbar {
+    width: 100%;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 1rem;
+    
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -59,25 +68,12 @@
     color: var(--blue);
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--white);
-    transition: all 0.2s ease;
-}
-
-
 .nav-links li:hover {
     transform: scale(1.2);
 }
 
-
-.main-about {
-    
-    min-height: 86vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center
+.main {
+    flex: 1;
 }
 
 .titulosabout {
@@ -86,71 +82,134 @@
     align-items: center;
     justify-content: center;
     color: var(--purple);
-    margin:20px;
+    margin: 2vh 0;
 }
 
 .titulosabout h2 {
     color: var(--blue);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 300;
-    margin-top: 5px;
+    margin-top: 0.25rem;
 }
-    
+
 .contentabout {
     display: flex;
-    justify-content: center;
-    flex-direction: row-reverse;
+    flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    gap: 200px;
+    margin-top: 2rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .image-contentabout img {
-    height: 300px;
-    width: 300px;
+    width: 80%;
+    height: auto;
+    max-height: 50vh;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-left: 1.5rem;
+    align-items: center;
 }
-
-
-  
 
 .text-contentabout {
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 400;
-    height: 300px;
-    width: 300px;
     color: black;
-    text-align:center;
+    text-align: center;
     line-height: 1.5;
-    margin-top: 30px;
-    padding-top: 60px;
+    max-width: 80ch;
+    padding-top: 2rem;
 }
-
-
-
-
-
-
-
-
 
 footer {
     background-color: var(--purple);
-    color: var(--purple);
     text-align: center;
-    padding: 5px;
+    padding: 1.25rem;
     height: 12vh;
-    
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin-top: auto; /* Esto asegura que el footer esté abajo */
 }
 
-.text-footer{
-    color: var(--white);    
+.text-footer {
+    color: var(--white);
 }
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 8rem;
+    }
+
+
+    .contentabout {
+        max-width: 100vw;
+    }
+
+    .text-contentabout{
+        width: 90vw;
+    }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contentabout {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    footer {
+        padding: 3vh 2vw;
+    }
+    .text-contentabout {
+        max-width: 40ch;
+    }
+
+    .image-contentabout img {
+        max-width: 40vw;
+    }
+}
+
+/* Estilos para notebooks/PC */
+@media (min-width: 1024px) {
+    .header {
+        padding: 1rem 10vw;
+    }
+    footer {
+        padding: 2vh 2vw;
+    }
+    .nav-links {
+        gap: 2rem;
+    }
+
+    .contentabout {
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .text-contentabout {
+        max-width: 60ch;
+        padding-top: 1rem;
+    }
+
+    .image-contentabout img {
+        max-width: 30vw;
+        max-height: 40vh;
+    }
+}
+
